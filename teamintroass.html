@@ -65,7 +65,7 @@
             border-radius: 5px;
         }
         .back {
-            background-image: url(https://img.freepik.com/free-photo/digital-art-moon-wallpaper_23-2150918941.jpg);
+            background-image: url(https://images6.alphacoders.com/136/1361224.jpeg);
             background-size: cover;
             background-position: center;
             transform: rotateY(180deg);
@@ -80,7 +80,8 @@
         .back p{
             justify-content: flex-end;
             display: none;
-	    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
         }
         .back:hover p{
             display:block
@@ -90,12 +91,12 @@
             position: absolute;
             top: 73.5%;
             left: 18.5%;
-            height: 20px;
-            width: 20px;
         }
         .git-info{
             top:70%;
             left: 25%;
+            height: 20px;
+            width: 20px;
             position: absolute;
         }
         .card:hover {
@@ -172,7 +173,7 @@
             color: yellow;
         }
         .card:nth-child(1) .self-intro{
-            left: 2.5%;
+            left: 3%;
         }
         .edgy{
             display: none;
@@ -184,6 +185,22 @@
             left: 9%;
             clip-path: inset(0 0 30% 0);
             animation: berserker 2s ease 0s 1 normal forwards
+        }
+        .aura{
+            display: none;
+            width: 300px;
+            height: 280px;
+            overflow: hidden;
+            position: absolute;
+            animation: aurafire 1.5s ease 1.5s infinite;
+        }
+        .aurafi{
+            display: none;
+            width: 300px;
+            height: 280px;
+            overflow: hidden;
+            position: absolute;
+            animation: auraf 1.8s ease 1.5s infinite;
         }
         .card:nth-child(3) {
        	    background-image: linear-gradient(
@@ -290,9 +307,15 @@
 
             100% {opacity: 1; transform: translateY(0);}
         }
-        @keyframes shine-animation {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(10%); }
+        @keyframes aurafire {
+            0% { transform: translateY(0%); opacity:0.05;}
+            50% { transform: translateY(1%); opacity: 0.1;}
+            100%{transform: translateY(-1%);opacity: 0.05;}
+        }
+        @keyframes auraf {
+            0% { transform: translateY(0%); opacity:0.05;}
+            50% { transform: translateY(1.5%); opacity: 0.1;}
+            100%{transform: translateY(-1.5%);opacity: 0.05;}
         }
     </style>    
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
@@ -305,7 +328,7 @@
             <div class="card flip-container"
             _="on click toggle .flipped on me">
                 <div class="flipper">
-                    <div class="front" _="on mouseenter set body.style.backgroundColor to 'black' on mouseleave set body.style.backgroundColor to '#2f5a8f'">
+                    <div class="front" _="on mouseenter set body.style.backgroundImage to 'url(https://i.pinimg.com/originals/f8/33/52/f83352c9b3063756620dae5151fbbb27.jpg)' then set body.style.backgroundSize to 'cover' on mouseleave set body.style.backgroundImage to 'none'">
                         <div class="name">Hardy Amuntai</div>
                         <div class="self-intro" id="intro1">
                             <p>My name is Hardy Amuntai, I am a third year computer science student from Indonesia.</p>
@@ -315,10 +338,12 @@
                         <img class="edgy" src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" alt="darkknight">
                         <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokp-33811d30-d721-403e-8f05-de17d3253d81.png/v1/fill/w_1280,h_1150/role_ml_05_by_morphysss_dg1jokp-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE1MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rcC0zMzgxMWQzMC1kNzIxLTQwM2UtOGYwNS1kZTE3ZDMyNTNkODEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UdqnoqFKJ3X9rH34LfYla_ttclw30cf-M3fGITFjXr4" alt="tank">
                     </div>
-                    <div class="back" _="on mouseenter set body.style.backgroundColor to '#881A07' on mouseleave set body.style.backgroundColor to '#2f5a8f'">
+                    <div class="back" _="on mouseenter set body.style.backgroundImage to 'url(https://images4.alphacoders.com/693/thumb-1920-693128.jpg)' then set body.style.backgroundSize to 'cover' on mouseleave set body.style.backgroundImage to 'none'">
                         <p>I'm proficient in java, c++, python, c and html/css, i usually specialize on hardware projects and design</p>
-                        <a href="https://github.com/Haitdyckler"><img src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png"alt="github"> </a>
-                        <div class="git-info"><p>Github account</p></div>           
+                        <img class="aura" src="https://clipart-library.com/images_k/fire-effect-with-transparent-background/fire-effect-with-transparent-background-12.png" alt="fire"style="top:31%;left:-18%;width:400px;opacity: 0.1;">
+                        <img class="aurafi" src="https://static.vecteezy.com/system/resources/thumbnails/048/804/001/small_2x/blue-fire-flame-effect-on-transparent-background-flames-hot-burn-orange-red-glow-spark-flaming-burning-campfire-png.png" alt="fire"style="top:33%;left:-18%;width:400px;opacity: 0.1;position: relative;">
+                        <a href="https://github.com/Haitdyckler"><img class="git-info"src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png"alt="github"> </a>
+                        <div class="git-info"><p>Github account</p></div>          
                     </div>
                 </div>
             </div>
