@@ -317,6 +317,22 @@
             50% { transform: translateY(1.5%); opacity: 0.1;}
             100%{transform: translateY(-1.5%);opacity: 0.05;}
         }
+	    
+        .card:nth-child(4){
+            background-image: linear-gradient(
+                to right,
+            rgba(159, 153, 153, 0.5), /* Color with transparency */
+            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
+            ), url(https://naniwallpaper.com/files/wallpaper/lucy-cyberpunk-edgerunners/lucy-cyberpunk-edgerunners-18.webp);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card:nth-child(4) .name{
+            color: rgb(58, 167, 240);
+        }
+	    
     </style>    
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 </head>
