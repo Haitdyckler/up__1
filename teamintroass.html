@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,8 @@
             text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 35px;
-            color: white;
+            color: gold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
         .carousel {
             display: flex;
@@ -27,7 +29,7 @@
             gap: 15px;
             width: 80%;
             padding: 20px;
-            background-color: #f3f4f6;
+            background-color: rgb(235 235 235 / 0.8);
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
@@ -202,6 +204,59 @@
             position: absolute;
             animation: auraf 1.8s ease 1.5s infinite;
         }
+
+        .card:nth-child(2){
+            background-image: linear-gradient(
+                to right,
+            rgba(159, 153, 153, 0.5), /* Color with transparency */
+            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
+            ), url(https://mrwallpaper.com/images/thumbnail/black-white-stripes-barcelona-fc-02oi9nr7vlzxhmgs.webp);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card:nth-child(2) .name {
+            color: rgb(245, 245, 245);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	    }
+
+        .card:nth-child(2):hover .name {
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	    }
+
+        .card:nth-child(2):hover .self-intro{
+            font-family: 'copperplate', fantasy;
+            color: #FFD700; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            background-color: rgba(0 30 175 / 0.5);
+        }
+
+        .card:nth-child(2):hover{
+            background-image: linear-gradient(
+                to right,
+            rgba(159, 153, 153, 0.5), /* Color with transparency */
+            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
+            ), url(https://st3.depositphotos.com/1257128/14407/v/450/depositphotos_144077977-stock-illustration-fotbolfc-barcelona-log.jpg);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: crest 1s ease 0s 1 normal forwards;
+        }
+
+        .ball{
+            position: absolute;
+            bottom: -10px;
+            left: 200px;
+            display: none;
+            height: 120px;
+            width: 120px;
+            animation: bounce 2s ease 0s 1 normal forwards;
+        }
+
         .card:nth-child(3) {
        	    background-image: linear-gradient(
             to right,
@@ -268,6 +323,21 @@
         #rollcake2 { animation-delay: 0.1s; width: 65%;}
 	#rollcake3 { animation-delay: 0.2s; width: 30%;}
 
+        .card:nth-child(4){
+            background-image: linear-gradient(
+                to right,
+            rgba(159, 153, 153, 0.5), /* Color with transparency */
+            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
+            ), url(https://naniwallpaper.com/files/wallpaper/lucy-cyberpunk-edgerunners/lucy-cyberpunk-edgerunners-18.webp);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card:nth-child(4) .name{
+            color: rgb(58, 167, 240);
+        }
+
         @keyframes muterBolaku {
             0% { 
         	transform: rotate(0deg) translateX(95px); 
@@ -317,27 +387,64 @@
             50% { transform: translateY(1.5%); opacity: 0.1;}
             100%{transform: translateY(-1.5%);opacity: 0.05;}
         }
-	    
-        .card:nth-child(4){
-            background-image: linear-gradient(
-                to right,
-            rgba(159, 153, 153, 0.5), /* Color with transparency */
-            rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
-            ), url(https://naniwallpaper.com/files/wallpaper/lucy-cyberpunk-edgerunners/lucy-cyberpunk-edgerunners-18.webp);
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+
+        @keyframes crest {
+            0% {
+                transform: scaleX(0.4);
+            }
+            100% {
+                transform: scaleX(1);
+            }
         }
-        .card:nth-child(4) .name{
-            color: rgb(58, 167, 240);
+
+        @keyframes bounce {
+            0% {
+                animation-timing-function: ease-in;
+                opacity: 0;
+                transform: translateY(-250px);
+            }
+
+            38% {
+                animation-timing-function: ease-out;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            55% {
+                animation-timing-function: ease-in;
+                transform: translateY(-65px);
+            }
+
+            72% {
+                animation-timing-function: ease-out;
+                transform: translateY(0);
+            }
+
+            81% {
+                animation-timing-function: ease-in;
+                transform: translateY(-28px);
+            }
+
+            90% {
+                animation-timing-function: ease-out;
+                transform: translateY(0);
+            }
+
+            95% {
+                animation-timing-function: ease-in;
+                transform: translateY(-8px);
+            }
+
+            100% {
+                animation-timing-function: ease-out;
+                transform: translateY(0);
+            }
         }
-	    
     </style>    
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 </head>
 <body>
-    <h1>Team introduction</h1>
+    <h1>ML-1<br> Introduction</h1>
     <div class="carousel">
         <div class="card" _="on mouseenter 
         set #intro1.style.display to 'block'on mouseleave set #intro1.style.display to 'none'">  
@@ -364,12 +471,20 @@
                 </div>
             </div>
         </div>
-        <div class="card" _="on mouseenter set #intro2.style.display to 'block' then set body.style.backgroundColor to '#6CACE4' on mouseleave set #intro2.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
-            <div class="name">Bryan Kenneth Budiyantoro</div>
+        <div class="card" _="on mouseenter set #intro2.style.display to 'block' 
+                    then set body.style.backgroundImage to 'url(https://i.ytimg.com/vi/TCuPAFWIea0/maxresdefault.jpg)' 
+                    then set body.style.backgroundSize to 'cover'
+                    then set body.style.backgroundPosition to 'center'
+                    on mouseleave set #intro2.style.display to 'none' 
+                    then set body.style.background to '#2f5a8f'
+                    then set body.style.backgroundImage to 'none'">
+            <div class="name">Bryan Kenneth</div>
             <div class="self-intro" id="intro2">
-                My name is Bryan Kenneth Budiyantoro, I am a third year computer science student from Indonesia.
+                My name is Bryan Kenneth, I am a third year computer science student from Indonesia.<br><br>
+                I like to play video games and watch soccer matches. I hope I can be a game developer in the future.
             </div>
-            <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jok1-2f8f38ab-68d5-4783-ae03-d682189289ad.png/v1/fill/w_1280,h_2270/role_ml_02_by_morphysss_dg1jok1-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI3MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rMS0yZjhmMzhhYi02OGQ1LTQ3ODMtYWUwMy1kNjgyMTg5Mjg5YWQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.0xHxH1gE8jPOEZDKKkT8SqHRsp2GYBJB06UE312NRI0" alt="fighter">
+            <img class="role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jok1-2f8f38ab-68d5-4783-ae03-d682189289ad.png/v1/fill/w_1280,h_2270/role_ml_02_by_morphysss_dg1jok1-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI3MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rMS0yZjhmMzhhYi02OGQ1LTQ3ODMtYWUwMy1kNjgyMTg5Mjg5YWQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.0xHxH1gE8jPOEZDKKkT8SqHRsp2GYBJB06UE312NRI0" alt="fighter">
+            <img class="ball" src="https://png.pngtree.com/png-vector/20240315/ourmid/pngtree-soccer-ball-on-white-over-grey-background-football-oldstyle-png-image_11941305.png" alt="ball">
         </div>
         <div class="card" _="on mouseenter set #intro3.style.display to 'block' then set body.style.backgroundColor to '#8558E4' on mouseleave set #intro3.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
             <div class="name">Javier Wibowo</div>
