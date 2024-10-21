@@ -341,19 +341,43 @@
 	#ring3 { animation-delay: 0.2s; top: 92%; width: 200px;}
 	
         .card:nth-child(4){
+            background-image: url(https://naniwallpaper.com/files/wallpaper/lucy-cyberpunk-edgerunners/lucy-cyberpunk-edgerunners-18.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px; /* Optional: Adds spacing inside the border */
+            box-sizing: border-box; /* Keeps the card size consistent */
+        }
+
+        .card:nth-child(4):hover .self-intro{
+            color: white;
+            opacity: 1;
+            text-shadow: 2px 2px 4px rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.138);
+            opacity: 1;
+        }
+        
+        .card:nth-child(4):hover {
             background-image: linear-gradient(
                 to right,
             rgba(159, 153, 153, 0.5), /* Color with transparency */
             rgba(0, 0, 0, 0.5)  /* Same color for a solid overlay */
-            ), url(https://naniwallpaper.com/files/wallpaper/lucy-cyberpunk-edgerunners/lucy-cyberpunk-edgerunners-18.webp);
+            ), url(https://c4.wallpaperflare.com/wallpaper/293/1013/173/cyberpunk-edgerunners-lucy-edgerunners-cyberpunk-hd-wallpaper-preview.jpg);
             background-size: cover;
-            background-position: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border: 5px solid rgb(71, 25, 255); /* Border appears on hover */
+            box-shadow: 0 0 15px 5px rgba(58, 167, 240, 0.7); /* Glowing effect */
+            animation: glowing-border 5s infinite, borderColorChange 3s infinite; /* Trigger the animation */
         }
+        
         .card:nth-child(4) .name{
             color: rgb(58, 167, 240);
         }
+
+	.card:nth-child(4):hover .name {
+            color: yellow;
+	}
 	@keyframes ringAnimate {
 		85% {opacity:0;}
 	}
@@ -459,6 +483,27 @@
                 transform: translateY(0);
             }
         }
+	@keyframes glowing-border {
+    	0% {
+        	box-shadow: 0 0 30px 15px rgb(0, 0, 0);
+    	} 50% {
+        	box-shadow: 0 0 30px 15px rgb(255, 255, 255);
+   	} 100% {
+        	box-shadow: 0 0 30px 15px rgb(0, 0, 0);
+    	}
+}
+	@keyframes borderColorChange {
+    	0% {
+        	border-color: rgba(40, 135, 220, 1);
+    	} 33% {
+        	border-color: rgb(0, 98, 255);
+   	} 66% {
+        	border-color: rgb(0, 217, 255);
+    	} 100% {
+        	border-color: rgba(40, 135, 220, 1);
+    	}
+}
+	
     </style>    
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 </head>
