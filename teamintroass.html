@@ -272,6 +272,15 @@
 	    .card:nth-child(3):hover .name {
             color: yellow;
 	    }
+	.card:nth-child(3):hover .self-intro{
+            animation-name: introku;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background-color: rgba(158, 193, 219, 0.566);
+            text-shadow: 2px 2px 4px rgb(194, 152, 224);
+            color: white;
+        }
         .halo{
             display: none;
             width: 250px;
@@ -378,6 +387,17 @@
 	.card:nth-child(4):hover .name {
             color: yellow;
 	}
+	@keyframes introku {
+        	25% {
+            		background-color: rgba(167, 168, 235, 0.721);
+        	}
+        	50% {
+            		background-color: rgba(226, 170, 250, 0.721);
+        	}
+        	75% {
+            		background-color: rgba(245, 181, 206, 0.721);
+        	}
+    	}
 	@keyframes ringAnimate {
 		85% {opacity:0;}
 	}
