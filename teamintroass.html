@@ -503,6 +503,31 @@
         	border-color: rgba(40, 135, 220, 1);
     	}
 }
+	.card:nth-child(5){
+            background-image: url(https://i.pinimg.com/474x/3f/12/a0/3f12a07125a5a6baae2bb2725e8ae745.jpg);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card:nth-child(5):hover{
+            animation: backgroundSwitch 20s infinite;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image opacity 5s ease-in-out;
+        }
+        @keyframes backgroundSwitch {
+        0%,20% { background-image: url('https://i.pinimg.com/236x/0e/11/7b/0e117b03b976e3a9556465ed083b9b56.jpg'); }
+        20%,40% { background-image: url('https://img.freepik.com/free-photo/anime-rainbow-landscape_23-2151712693.jpg'); }
+        40%,60% { background-image: url('https://i.pinimg.com/originals/cb/a5/10/cba5104e51ba3de3cfbd5aa315082ea4.jpg'); }
+        60%,80% { background-image: url('https://i.pinimg.com/474x/a3/45/88/a345883cb63685b8e044d28368861a27.jpg'); }
+        80%,100% { background-image: url('https://i.pinimg.com/236x/0e/11/7b/0e117b03b976e3a9556465ed083b9b56.jpg'); }
+        }
+        
+        .card:nth-child(5) .name{
+            color: rgb(219, 112, 144);
+        }
 	
     </style>    
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
@@ -582,12 +607,19 @@
             </div>
             <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1joku-298a3207-39a0-465a-a9f3-61c625fbea96.png/v1/fill/w_1280,h_1164/role_ml_06_by_morphysss_dg1joku-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE2NCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rdS0yOThhMzIwNy0zOWEwLTQ2NWEtYTlmMy02MWM2MjVmYmVhOTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.guPRFgnYvUCcHJBbu-EQsgs0jHfn3pS413TdiIJllvk" alt="hyper">
         </div>
-        <div class="card" _="on mouseenter set #intro5.style.display to 'block' on mouseleave set #intro5.style.display to 'none'">
+        <div class="card" _="on mouseenter set #intro5.style.display to 'block' 
+                            then set body.style.backgroundImage to 'url(https://i.pinimg.com/originals/a4/04/a4/a404a481f48045b1a24cdbba5cc8d350.gif)' 
+                            then set body.style.backgroundSize to 'cover'
+                            then set body.style.backgroundPosition to 'center'
+                            on mouseleave set #intro5.style.display to 'none' 
+                            then set body.style.backgroundImage to 'none' ">
             <div class="name">Christelia</div>
             <div class="self-intro" id="intro5">
-                My name is Christelia, I am a third year computer science student from Indonesia.
+                My name is Christelia, I am a third year computer science student from Indonesia. <br><br>
+                My hobby are reading comic, sleeping and eating. I like to explore new place and cute things.
             </div>
             <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokg-685d37d5-c110-48b3-a924-f36273e9bab2.png/v1/fill/w_1280,h_2497/role_ml_04_by_morphysss_dg1jokg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQ5NyIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rZy02ODVkMzdkNS1jMTEwLTQ4YjMtYTkyNC1mMzYyNzNlOWJhYjIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ho0ZRTeA2-UBoQBtEIKJPbu7s7jkK8Dh0CavEZHrF0g" alt="mage">
+            </div>
         </div>
     </div>
 </body>
