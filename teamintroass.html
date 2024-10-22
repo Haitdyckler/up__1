@@ -525,8 +525,51 @@
         80%,100% { background-image: url('https://i.pinimg.com/236x/0e/11/7b/0e117b03b976e3a9556465ed083b9b56.jpg'); }
         }
         
+        .card:nth-child(5):hover .self-intro{
+            font-family: cursive;
+            color: #000000; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
         .card:nth-child(5) .name{
             color: rgb(219, 112, 144);
+        }
+
+        .cinnamon{
+            position: absolute;
+            top: -3px;;
+            left: 220px;
+            display: none;
+            height: 70px;
+            width: 70px;  
+        }
+
+        .pochacco{
+            position: absolute;
+            bottom: 10px;;
+            left: 10px;
+            display: none;
+            height: 70px;
+            width: 70px; 
+            animation:move 10s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-40px); /* Start off the left of the viewport */
+            }
+            100% {
+                transform: translateX(50vw); /* Move to the right side of the viewport */
+            }
+        }
+
+        .sparkle{
+            position:absolute;
+            top: 55px;;
+            left: 50px;
+            display: none;
+            height: 100px;
+            width: 200px;
         }
 	
     </style>    
@@ -619,7 +662,10 @@
                 My hobby are reading comic, sleeping and eating. I like to explore new place and cute things.
             </div>
             <img class= "role" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokg-685d37d5-c110-48b3-a924-f36273e9bab2.png/v1/fill/w_1280,h_2497/role_ml_04_by_morphysss_dg1jokg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQ5NyIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rZy02ODVkMzdkNS1jMTEwLTQ4YjMtYTkyNC1mMzYyNzNlOWJhYjIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ho0ZRTeA2-UBoQBtEIKJPbu7s7jkK8Dh0CavEZHrF0g" alt="mage">
-            </div>
+            <img class="cinnamon" src="https://media.tenor.com/inv_IC0z2rgAAAAj/cinnamoroll.gif" alt="cinnamon"><br> 
+            <img class="sparkle" src="https://img.clipart-library.com/2/clip-transparent-sparkles-gif/clip-transparent-sparkles-gif-9.gif" alt="sparkle"><br> 
+            <img class="pochacco" src="https://i.pinimg.com/originals/f4/2c/b9/f42cb9568b55128d15c594edd30c556c.gif" alt="pochacco">  
+        </div>
         </div>
     </div>
 </body>
